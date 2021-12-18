@@ -5,7 +5,8 @@
   "scripts": {
     "printCode": "node helpers/string-printer.js",
     "compile": "superbrain compile hangman.bf",
-    "minify": "superbrain minify hangman.bf"
+    "minify": "superbrain minify hangman.bf",
+    "rimraf": "rimraf lib/*.js hangman.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/PumpedSardines/Brainfuck-Hangman#readme",
   "dependencies": {
-    "superbrain": "1.1.0"
+    "rimraf": "^3.0.2",
+    "superbrain": "1.1.1"
   }
 }

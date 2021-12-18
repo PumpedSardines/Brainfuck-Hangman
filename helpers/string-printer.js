@@ -28,5 +28,5 @@ const [nodePath, filePath, ...text] = process.argv;
 if(text.length === 0) {
   throw new Error("No text provided");
 } else {
-  console.log(generatePrintCode(text.join(" ")));
+  console.log(generatePrintCode(text.join(" ") + "\n"));
 }
