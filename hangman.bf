@@ -1,5 +1,5 @@
 [-][
-  This is the entire handman code
+  This is the entire hangman code with comments
 ]
 
 - Place a marker at the beginning of the tiles

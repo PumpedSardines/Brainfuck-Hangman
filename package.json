@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This is a project to write a simple hangman program in brainfuck",
   "scripts": {
-    "printCode": "node helpers/string-printer.js"
+    "printCode": "node helpers/string-printer.js",
+    "compile": "superbrain compile hangman.bf",
+    "minify": "superbrain minify hangman.bf"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/PumpedSardines/Brainfuck-Hangman/issues"
   },
-  "homepage": "https://github.com/PumpedSardines/Brainfuck-Hangman#readme"
+  "homepage": "https://github.com/PumpedSardines/Brainfuck-Hangman#readme",
+  "dependencies": {
+    "superbrain": "1.1.0"
+  }
 }
