@@ -1,0 +1,19 @@
+{
+  "name": "brainfuck-hangman",
+  "version": "1.0.0",
+  "description": "This is a project to write a simple hangman program in brainfuck",
+  "scripts": {
+    "printCode": "node helpers/string-printer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PumpedSardines/Brainfuck-Hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PumpedSardines/Brainfuck-Hangman/issues"
+  },
+  "homepage": "https://github.com/PumpedSardines/Brainfuck-Hangman#readme"
+}
