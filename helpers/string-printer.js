@@ -1,3 +1,5 @@
+const constants = require("./brainfuck-constants.js");
+
 /**
  * Generates valid brainfuck code that prints a given string
  * @param {string} text 
@@ -10,17 +12,26 @@ function generatePrintCode(text) {
   let commands = "";
 
   for(const num of numbers) {
-    const move = num - currentVal;
-    if(move < 0) {
-      currentVal = currentVal + move;
-      commands += String("-").repeat(Math.abs(move)) + ".";
+    const codeblock = constants[num].code;
+
+    if(codeblock.length >= Math.abs(num - currentVal)) {
+      const move = num - currentVal;
+  
+      if(move < 0) {
+        currentVal = currentVal + move;
+        commands += String("-").repeat(Math.abs(move)) + ".";
+      } else {
+        currentVal = currentVal + move;
+        commands += String("+").repeat(move) + ".";
+      }
     } else {
-      currentVal = currentVal + move;
-      commands += String("+").repeat(move) + ".";
+      currentVal = num;
+      commands += codeblock;
     }
+
   }
 
-  return commands;
+  return commands.replace(/^\[\-\]>\[\-\]/, ">").replace(/^\[\-\]/, "");
 }
 
 const [nodePath, filePath, ...text] = process.argv;

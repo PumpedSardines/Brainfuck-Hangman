@@ -21,6 +21,6 @@
   "homepage": "https://github.com/PumpedSardines/Brainfuck-Hangman#readme",
   "dependencies": {
     "rimraf": "^3.0.2",
-    "superbrain": "1.1.1"
+    "superbrain": "1.1.2"
   }
 }
